@@ -1,0 +1,29 @@
+.loginBtn {
+  position: relative;
+  z-index: 1;
+  overflow: visible;
+  padding: 0.3em 0.6em 0.375em;
+  border: 1px solid #999;
+  border-bottom-color: #888;
+  margin: 0;
+  text-decoration: none;
+  text-align: center;
+  font: bold 11px/normal 'lucida grande', tahoma, verdana, arial, sans-serif;
+  white-space: nowrap;
+  cursor: pointer;
+  zoom: 1;
+  
+  border-color: #29447e #29447e #1a356e;
+  color: #fff;
+  background-color: #5B74A8;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#637bad), to(#5872a7));
+  background-image: -moz-linear-gradient(#637bad, #5872a7);
+  background-image: -o-linear-gradient(#637bad, #5872a7);
+  background-image: linear-gradient(#637bad, #5872a7);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#637bad', EndColorStr='#5872a7');
+  -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1), inset 0 1px 0 #8a9cc2;
+  -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1), inset 0 1px 0 #8a9cc2;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1), inset 0 1px 0 #8a9cc2;
+
+  width: 100%;
+}
