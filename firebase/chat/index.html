@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Chat DBaaS - Firebase</title>
+    <link rel='stylesheet prefetch' href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+    <link rel='stylesheet prefetch' href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css'>
+    <link rel='stylesheet prefetch' href='//cdnjs.cloudflare.com/ajax/libs/bootstrap-colorpicker/2.3.3/css/bootstrap-colorpicker.min.css'>
+    <link rel='stylesheet prefetch' href='app.css'>
+  </head>
+
+  <body translate="no" >
+    <div class="container">
+      <h1>Diga um Oi</h1>
+      <!--
+      <p class="lead">Use this document as a way to quickly start any new project with Appbase and Twitter Bootstrap.<br> All you get is this text and a mostly barebones HTML document.</p>
+      -->
+      
+      <div class="row">
+        <div class="col-md-12">
+          <form class="form-inline">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" class="form-control" id="name" placeholder="Igor Lima">
+            </div>
+            <div class="form-group">
+              <label for="color">Color</label>
+              <input type="text" class="form-control" id="color" placeholder="#00AABB">
+            </div>
+          </form>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-md-5">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <span class="glyphicon glyphicon-comment"></span> Chat
+              <div class="btn-group pull-right">
+                <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                  <span class="glyphicon glyphicon-chevron-down"></span>
+                </button>
+                <ul class="dropdown-menu slidedown">
+                  <li><a href="#"><span class="glyphicon glyphicon-refresh">
+                    </span>Refresh</a></li>
+                  <li><a href="#"><span class="glyphicon glyphicon-ok-sign">
+                    </span>Available</a></li>
+                  <li><a href="#"><span class="glyphicon glyphicon-remove">
+                    </span>Busy</a></li>
+                  <li><a href="#"><span class="glyphicon glyphicon-time"></span>
+                    Away</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#"><span class="glyphicon glyphicon-off"></span>
+                    Sign Out</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="panel-body">
+              <ul class="chat">
+                <!--
+                <li class="left clearfix"><span class="chat-img pull-left">
+                  <span class="glyphicon glyphicon-user" aria-hidden="true" style="font-size: 55px; color: green;"></span>
+                  </span>
+                  <div class="chat-body clearfix">
+                    <div class="header">
+                      <strong class="primary-font">Jack Sparrow</strong> <small class="pull-right text-muted">
+                      <span class="glyphicon glyphicon-time"></span>12 mins ago</small>
+                    </div>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
+                      dolor, quis ullamcorper ligula sodales.
+                    </p>
+                  </div>
+                </li>
+                <li class="right clearfix"><span class="chat-img pull-right">
+                  <img src="http://placehold.it/50/FA6F57/fff&amp;text=ME" alt="User Avatar" class="img-circle">
+                  </span>
+                  <div class="chat-body clearfix">
+                    <div class="header">
+                      <small class=" text-muted"><span class="glyphicon glyphicon-time"></span>13 mins ago</small>
+                      <strong class="pull-right primary-font">Bhaumik Patel</strong>
+                    </div>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
+                      dolor, quis ullamcorper ligula sodales.
+                    </p>
+                  </div>
+                </li>
+                <li class="left clearfix"><span class="chat-img pull-left">
+                  <img src="http://placehold.it/50/55C1E7/fff&amp;text=U" alt="User Avatar" class="img-circle">
+                  </span>
+                  <div class="chat-body clearfix">
+                    <div class="header">
+                      <strong class="primary-font">Jack Sparrow</strong> <small class="pull-right text-muted">
+                      <span class="glyphicon glyphicon-time"></span>14 mins ago</small>
+                    </div>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
+                      dolor, quis ullamcorper ligula sodales.
+                    </p>
+                  </div>
+                </li>
+                <li class="right clearfix"><span class="chat-img pull-right">
+                  <img src="http://placehold.it/50/FA6F57/fff&amp;text=ME" alt="User Avatar" class="img-circle">
+                  </span>
+                  <div class="chat-body clearfix">
+                    <div class="header">
+                      <small class=" text-muted"><span class="glyphicon glyphicon-time"></span>15 mins ago</small>
+                      <strong class="pull-right primary-font">Bhaumik Patel</strong>
+                    </div>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
+                      dolor, quis ullamcorper ligula sodales.
+                    </p>
+                  </div>
+                </li>
+                -->
+              </ul>
+            </div>
+            <div class="panel-footer">
+              <div class="input-group">
+                <input id="message" type="text" class="form-control input-sm" placeholder="Type your message here...">
+                <span class="input-group-btn">
+                  <button class="btn btn-warning btn-sm" id="send-msg">
+                    Send
+                  </button>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <button id="dangerBtn" type="button" class="btn btn-danger">Limpar DB</button>
+    </div>
+    <!--
+    http://getbootstrap.com/getting-started/#template
+    https://mjolnic.com/bootstrap-colorpicker/
+    Based on: http://www.bootply.com/6mdOs5FvKU
+    -->    
+    <script src='//www.gstatic.com/firebasejs/3.2.1/firebase.js'></script>
+    <script src='//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js'></script>
+    <script src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
+    <script src='//cdnjs.cloudflare.com/ajax/libs/bootstrap-colorpicker/2.3.3/js/bootstrap-colorpicker.min.js'></script>
+    <script src='//momentjs.com/downloads/moment-with-locales.min.js'></script>
+    <script src='app.js'></script>
+  </body>
+</html>
