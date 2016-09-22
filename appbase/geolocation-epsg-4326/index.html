@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>GeoLocation EPSG:4326 DBaaS Appbase</title>
+    <link rel='stylesheet prefetch' href='http://openlayers.org/en/v3.14.2/css/ol.css'>
+  </head>
+  <body translate="no" >
+    <div id="map" class="map"></div>
+    <form class="form-inline">
+      <label>Geometry type &nbsp;</label>
+      <select id="type">
+        <option value="Point">Point</option>
+        <option value="LineString">LineString</option>
+        <option value="Polygon">Polygon</option>
+      </select>
+    </form>
+    <script src='http://openlayers.org/en/v3.14.2/build/ol.js'></script>
+    <script src='https://cdn.rawgit.com/appbaseio/appbase-js/v0.10.8/browser/appbase.min.js'></script>
+    <script src='app.js'></script>
+  </body>
+</html>
