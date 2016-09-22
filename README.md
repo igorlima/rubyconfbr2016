@@ -5,7 +5,7 @@ This talk covers a way on how to focus on front-end development and not spend ho
 
 ## local http static server
 
-To run an ad hoc [http static server](https://gist.github.com/willurd/5720255) in current (or specified) directory, available at http://localhost:8000
+To run an ad hoc [http static server](https://gist.github.com/willurd/5720255) in current (or specified) directory, available at `http://localhost:8000`
 
 ```sh
 python -m SimpleHTTPServer 8000
